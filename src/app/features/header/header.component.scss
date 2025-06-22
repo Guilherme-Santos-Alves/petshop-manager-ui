@@ -3,20 +3,47 @@
     >.navbar{
             
         >.container-fluid{
-            >.collapse{
 
+            >.collapse{
+                
                 >.navbar-nav{
                     gap: 10px;
                     
-                    >li{
-                        >a{
-                            color: var(--ps-color-neutral-dark);
-                            font-size: 24px;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        padding: 0px 4px 0px 4px;
+                        gap: 0.4rem;
+
+                        > fa-icon,
+                        > i {
+                            font-size: 20px;
+                            color: var(--ps-color-primary);
+                            font-weight: 600;
+                            opacity: 0;
+                            transform: translateX(-8px);
+                            transition: opacity 0.3s ease, transform 0.3s ease;
                         }
 
-                        >a:hover{
-                            color: var(--ps-color-primary);
+                        > a {
+                            color: var(--ps-color-neutral-dark);
+                            font-size: 24px;
+                            transition: color 0.3s ease;
+                            padding: 4px 2px 4px 2px;
+                        }
+
+                        &:hover {
                             border-bottom: 3px solid var(--ps-color-primary);
+
+                            > fa-icon,
+                            > i {
+                                opacity: 1;
+                                transform: translateX(0);
+                            }
+
+                            > a {
+                                color: var(--ps-color-primary);
+                            }
                         }
                     }
                 }

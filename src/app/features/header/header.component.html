@@ -1,25 +1,33 @@
-<div class="ps-header">
+<header class="ps-header">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav d-flex align-items-center justify-content-center mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <ul class="navbar-nav mx-auto my- my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home ou Logo</a>
+                        <a class="nav-link active" aria-current="page" href="#">Início</a>
+                        <fa-icon [icon]="faHouse"></fa-icon>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Serviços</a>
+                        <fa-icon [icon]="faUserDoctor"></fa-icon>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Meu Pet</a>
+                        <fa-icon [icon]="faDog"></fa-icon>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Perfil</a>
+                        <fa-icon [icon]="faUser"></fa-icon>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Sair</a>
+                        <fa-icon [icon]="faDoorOpen"></fa-icon>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-</div>
+</header>
