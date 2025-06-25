@@ -1,0 +1,24 @@
+.ps-carousel{
+    padding: 40px;
+    border-radius: 20px;
+
+    >.carousel{
+        border-radius: 20px;
+
+        >.carousel-indicators{
+
+            >button{
+                background-color: var(--ps-color-neutral-dark);
+            }
+        }
+
+        >.carousel-inner{
+            border-radius: 30px;
+
+            img{
+                height: 360px;
+
+            }
+        }
+    }
+}

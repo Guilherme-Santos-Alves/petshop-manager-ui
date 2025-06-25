@@ -1,0 +1,16 @@
+.msg{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ps-color-gray-light);
+
+    >span{
+        font-size: 18px;
+        
+        >i{
+            font-weight: bold;
+            font-size: larger;
+        }
+    }
+}
