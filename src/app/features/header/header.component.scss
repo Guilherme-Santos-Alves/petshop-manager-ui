@@ -1,9 +1,11 @@
 .ps-header{
 
     >.navbar{
-            
-        >.container-fluid{
+        padding: 0px;
 
+        >.container-fluid{
+            background-color: var(--ps-color-gray-lighter);
+            padding: 8px;
             >.collapse{
                 
                 >.navbar-nav{
@@ -14,6 +16,8 @@
                         align-items: center;
                         padding: 0px 4px 0px 4px;
                         gap: 0.4rem;
+                        border-bottom: 3px solid transparent;
+                        border-top: 3px solid transparent;
 
                         > fa-icon,
                         > i {
