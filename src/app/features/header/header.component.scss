@@ -1,5 +1,6 @@
 .ps-header{
-
+    font-family: var(--ps-font-body);
+    font-weight: 800;
     >.navbar{
         padding: 0px;
 
@@ -52,6 +53,22 @@
                     }
                 }
             }
+        }
+    }
+
+    .top-message{
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--ps-color-gray-light);
+        font-family: var(--ps-font-body);
+        font-size: 18px;
+        font-weight: bold;
+        font-size: larger;
+
+        >i{
+            padding-right: 5px;
         }
     }
 }

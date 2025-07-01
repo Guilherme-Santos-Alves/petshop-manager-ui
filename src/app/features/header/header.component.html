@@ -7,11 +7,11 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav mx-auto my- my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Início</a>
+                        <a class="nav-link active" routerLink="/home" aria-current="page">Início</a>
                         <fa-icon [icon]="faHouse"></fa-icon>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Serviços</a>
+                        <a class="nav-link active" routerLink="/home" aria-current="page" href="#">Serviços</a>
                         <fa-icon [icon]="faUserDoctor"></fa-icon>
                     </li>
                     <li class="nav-item">
@@ -30,4 +30,8 @@
             </div>
         </div>
     </nav>
+    <span class="top-message">
+        <i class="bi bi-clock-history"></i>
+        Agende já a vacinação do seu Pet na aba Serviços!
+    </span>
 </header>
