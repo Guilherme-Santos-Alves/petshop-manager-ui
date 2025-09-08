@@ -1,16 +1,44 @@
-<p>login works!</p>
-<div>
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>E-mail</mat-label>
-        <input matInput placeholder="Ex. email@example.com">
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-        <mat-label>Senha</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
-    </mat-form-field>
-    <ps-btn-primary [textBtn]="textBtn" [typeBtn]="typeBtn">
-    </ps-btn-primary>
+<div class="form-container">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="brand">
+                    <div class="brand__logo" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M180-475q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm180-160q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm240 0q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm180 160q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM266-75q-45 0-75.5-34.5T160-191q0-52 35.5-91t70.5-77q29-31 50-67.5t50-68.5q22-26 51-43t63-17q34 0 63 16t51 42q28 32 49.5 69t50.5 69q35 38 70.5 77t35.5 91q0 47-30.5 81.5T694-75q-54 0-107-9t-107-9q-54 0-107 9t-107 9Z"/></svg>
+                    </div>
+                    <div class="brand__text">
+                        <h1>PetShop</h1>
+                        <p>Portal do Tutor — entre para continuar</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <form [formGroup]="loginForm" (submit)="login()">
+                    <mat-form-field class="full" appearance="fill">
+                        <mat-label>E-mail</mat-label>
+                        <input matInput placeholder="Ex. email@example.com" formControlName="email" />
+                        <mat-icon matPrefix aria-hidden="true">mail_outline</mat-icon>
+                    </mat-form-field>
+
+                    <mat-form-field class="full" appearance="fill">
+                        <mat-label>Senha</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" />
+                        <button mat-icon-button matSuffix type="button" (click)="hide = !hide"
+                            [attr.aria-label]="'Mostrar/ocultar senha'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                        </button>
+                        <mat-icon matPrefix aria-hidden="true">lock_outline</mat-icon>
+                    </mat-form-field>
+
+                    <ps-btn-primary [textBtn]="textBtn" [typeBtn]="typeBtn">
+                    </ps-btn-primary>
+                </form>
+            </div>
+
+            <div class="card-footer">
+                <span>Não tem conta? <a href="#">Registre-se</a></span>
+            </div>
+        </div>
+    </div>
 </div>

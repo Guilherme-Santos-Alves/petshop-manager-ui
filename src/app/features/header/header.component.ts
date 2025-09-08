@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faDog, faUserDoctor, faUser, faDoorOpen, faHouse } from '@fortawesome/free-solid-svg-icons';
+import { LoginService } from 'src/app/pages/login/services/login.service';
 
 @Component({
   selector: 'ps-header',
@@ -13,9 +14,13 @@ export class HeaderComponent implements OnInit {
   faDoorOpen = faDoorOpen;
   faHouse = faHouse;
 
-  constructor() { }
+  constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
+  }
+
+  sair() {
+    this.loginService.sair();
   }
 
 }

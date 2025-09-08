@@ -1,0 +1,96 @@
+:host {
+  --primary: var(--ps-color-primary);
+  --primary-600: #6d28d9;
+  --accent: var(--ps-color-accent);
+  --bg-a: var(--ps-color-neutral-light);
+  --bg-b: #dbeafe;
+  --card-bg: var(--ps-color-gray-lighter);
+  --border: var(--ps-color-gray-light);
+  --muted: var(--ps-color-neutral-dark);
+  --text: var(--ps-color-dark);
+  --radius: 16px;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.form-container {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    position: relative;
+    background-color: #EEEEEE;
+}
+
+.container {
+  width: 100%;
+  max-width: 720px;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 28px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 14%, white), color-mix(in srgb, var(--accent) 6%, white));
+  border-bottom: 1px solid var(--border);
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    &__logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-600));
+      box-shadow: 0 8px 18px color-mix(in srgb, var(--primary) 28%, transparent);
+      svg { width: 30px; height: 30px; fill: #fff; }
+    }
+
+    &__text {
+      text-align: left;
+
+      h1 { margin: 0; color: var(--text); font-size: 1.25rem; font-weight: 700; }
+      p { margin: 4px 0 0; color: var(--muted); font-size: 0.92rem; }
+    }
+  }
+}
+
+.card-body {
+  padding: 22px 28px;
+  display: grid;
+  gap: 14px;
+}
+
+.card-footer {
+  padding: 14px 22px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+
+  a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--primary-600);
+    text-decoration: underline;
+  }
+}

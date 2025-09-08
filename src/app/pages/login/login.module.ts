@@ -7,6 +7,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { PsBtnPrimaryModule } from 'src/app/shared/components/ps-btn-primary/ps-btn-primary.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PsBtnPrimaryModule } from 'src/app/shared/components/ps-btn-primary/ps-
     MatIconModule,
     MatInputModule,
     MatButtonModule,
-    PsBtnPrimaryModule
+    PsBtnPrimaryModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class LoginModule { }
