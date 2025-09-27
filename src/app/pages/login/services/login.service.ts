@@ -2,28 +2,43 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IUser } from '../interfaces/IUser';
 import { Router } from '@angular/router';
+import { IUserData } from '../interfaces/IUserData';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor(private http: HttpClient, private router: Router) { }
+  private userData: any; 
+
+  constructor(private http: HttpClient, private router: Router) {}
 
   loginUser(payload: IUser) {
-    return this.http.post(`http://localhost:8080/auth/login`, payload);
+    return this.http.post<IUserData>(`http://localhost:8080/auth/login`, payload);
   }
 
-  setUserData(userData: string) {
-    localStorage.setItem('userData', userData);
+  setUserData(userData: IUserData) {
+    this.userData = userData;
   }
 
   getUserData() {
-    return JSON.parse(localStorage.getItem('userData') || '');
+    return this.userData;
   }
 
-  sair() {
-    localStorage.removeItem('userData');
-    this.router.navigateByUrl("/''");
+  getUserId(){
+    return this.userData?.id ?? null;
+  }
+
+  getToken(){
+    return this.userData?.token ?? null;
+  }
+
+  getRole(){
+    return this.userData?.role ?? null;
+  }
+
+  sair(): void {
+    this.userData = null;
+    this.router.navigateByUrl('/');
   }
 }

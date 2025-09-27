@@ -1,9 +1,97 @@
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+
+// :host {
+//   --ps-color-primary: var(--ps-color-primary);
+//   --ps-color-primary-600: #003366;
+//   --accent: var(--ps-color-accent);
+//   --bg-a: var(--ps-color-neutral-light);
+//   --bg-b: #dbeafe;
+//   --ps-color-gray-lighter: var(--ps-color-gray-lighter);
+//   --ps-color-gray-light: var(--ps-color-gray-light);
+//   --ps-color-neutral-dark: var(--ps-color-neutral-dark);
+//   --ps-color-dark: var(--ps-color-dark);
+//   --radius: 16px;
+//   --shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+// }
+
+.form-container {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    position: relative;
+    background-color: #EEEEEE;
 }
 
-.example-full-width {
+.container {
   width: 100%;
+  max-width: 720px;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: var(--ps-color-gray-lighter);
+  border-radius: var(--radius);
+  border: 1px solid var(--ps-color-gray-light);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 28px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--ps-color-primary) 14%, white), color-mix(in srgb, var(--ps-color-accent) 6%, white));
+  border-bottom: 1px solid var(--ps-color-gray-light);
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    &__logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--ps-color-primary), #ff9602e8);
+      box-shadow: 0 8px 18px color-mix(in srgb, var(--ps-color-primary) 38%, transparent);
+      svg { width: 30px; height: 30px; fill: #fff; }
+    }
+
+    &__text {
+      text-align: left;
+
+      h1 { margin: 0; color: var(--ps-color-dark); font-size: 1.25rem; font-weight: 700; }
+      p { margin: 4px 0 0; color: var(--ps-color-neutral-dark); font-size: 0.92rem; }
+    }
+  }
+}
+
+.card-body {
+  padding: 22px 28px;
+  display: grid;
+  gap: 14px;
+}
+
+.card-footer {
+  padding: 14px 22px;
+  border-top: 1px solid var(--ps-color-gray-light);
+  text-align: center;
+  color: var(--ps-color-neutral-dark);
+
+  a {
+    color: var(--ps-color-primary);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--ps-color-primary);
+    text-decoration: underline;
+  }
 }

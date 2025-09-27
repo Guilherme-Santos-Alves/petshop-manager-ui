@@ -1,5 +1,5 @@
 .ps-btn-primary {
-  background-color: #4f46e5; 
+  background-color: var(--ps-color-primary); 
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -12,11 +12,11 @@
 }
 
 .ps-btn-primary:hover {
-  background-color: #4338ca;
+  background-color: #fd7e00;
 }
 
 .ps-btn-primary:active {
-  background-color: #3730a3; 
+  background-color: #fe9f0f; 
 }
 
 .ps-btn-primary:disabled {

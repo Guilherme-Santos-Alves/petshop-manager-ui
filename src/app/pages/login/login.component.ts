@@ -35,9 +35,7 @@ export class LoginComponent implements OnInit {
       this.loginService.loginUser(payload).subscribe(
           (response) => {
             this.router.navigateByUrl('/home');
-
-            const userData = JSON.stringify(response);
-            this.loginService.setUserData(userData);
+            this.loginService.setUserData(response);
           }, (error) => {
             console.error(error);
           }
